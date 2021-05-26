@@ -46,4 +46,13 @@ for x in range(len(ranges)):
 
 print('Total Valid Passwords: ', totalValidPasswords)
 
+updatedValidPassword = 0
+for x in range(len(ranges)):
+    range1 = int(ranges[x][0])
+    range2 = int(ranges[x][1])
+    print('Range 1', currentPassword[x][range1])
+    print('Range 2', currentPassword[x][range2])
+    # if(letter[x] == currentPassword[x][range1] or letter[x] == currentPassword[x][range2] ):
+    #     print(updatedValidPassword)
 
+print(updatedValidPassword)
