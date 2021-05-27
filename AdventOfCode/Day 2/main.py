@@ -20,7 +20,7 @@ ranges = []
 letter = []
 currentPassword = []
 totalValidPasswords = 0
-for i in range(0, 3000, 3):
+for i in range(0, 9, 3):
     ranges.append((input[i].split('-')))
     letter.append((input[i+1].replace(':', '')))
     currentPassword.append((input[i+2]))
@@ -46,13 +46,16 @@ for x in range(len(ranges)):
 
 print('Total Valid Passwords: ', totalValidPasswords)
 
-updatedValidPassword = 0
+updatedValidPassword = []
 for x in range(len(ranges)):
     range1 = int(ranges[x][0])
     range2 = int(ranges[x][1])
-    print('Range 1', currentPassword[x][range1])
-    print('Range 2', currentPassword[x][range2])
-    # if(letter[x] == currentPassword[x][range1] or letter[x] == currentPassword[x][range2] ):
-    #     print(updatedValidPassword)
-
-print(updatedValidPassword)
+    range1 =-1
+    range2 =-1
+    if(letter[x] == currentPassword[x][range1] is not letter[x] == currentPassword[x][range2] ):
+        print('Target: ', letter[x])
+        print('Range 1', currentPassword[x][range1])
+        print('Range 2', currentPassword[x][range2])
+        updatedValidPassword.append(currentPassword)
+    print('-----------------------------')
+print(len(updatedValidPassword))
